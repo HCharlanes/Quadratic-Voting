@@ -33,7 +33,7 @@ contract NameReg is abstract {
 
 contract nameRegAware is abstract {
   function nameRegAddress() returns (address) {
-    return 0x985509582b2c38010bfaa3c8d2be60022d3d00da;
+    return 0x084f6a99003dae6d3906664fdbf43dd09930d0e3;
   }
   
   function named(bytes32 name) returns (address) {
