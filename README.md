@@ -1,2 +1,2 @@
 # Quadratic-Voting
-Quadratic Voting dApp for Ethercamp Hackathon
+Quadratic Voting dApp for Ethercamp Hackathon by @Schaeff, @hcharlanes and @mattyg
