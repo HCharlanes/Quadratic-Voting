@@ -1,81 +1,79 @@
-import "Proposal";
-
-contract Organization {  // can be killed, so the owner gets sent the money in the end
-
-	address public organizer;
-	mapping (address => bool) public members;
-	mapping (address => uint) public balances;
-	mapping (address => int) public propResults;
-	uint public numMembers;
-	uint public token_count;
-	uint public base_tokens = 100;
-	uint public numProposals;
-	uint public minNotice;
-	address[] public proposals;
-	uint public Now;
-
+import "Proposal.sol";
+contract Organizations {  // can be killed, so the owner gets sent the money in the end
+uint Now = now;
+uint owner;
+    function Organizations(){
+        owner = msg.sender;
+    }
+struct Organization{
+	byte name;
+	address organizer;
+	mapping (address => bool) members;
+	mapping (address => uint) balances;
+	uint numMembers;
+	uint token_count;
+	uint base_tokens;
+	uint numProposals;
+	address[] proposals;
+}
+    Organization[] public organizations;
 	event NewMember(address _new); // so you can log the event
 	event DeletedMember(address _old); // so you can log the event
-	event Dispatch(uint amount);
-
-	function Organization() {
-		organizer = msg.sender;		
-		token_count = 0;
-		numMembers = 0;
+	
+	function NewOrganization(string name) {
+	    uint newOrg = organizations.push();
+		newOrg.name = name;
+		newOrg.organizer = msg.sender;		
+		newOrg.token_count = 0;
+		newOrg.numMembers = 0;
+		newOrg.numProposals = 0;
+		return newOrg;
 	}
 
-	function toTime(uint fakeTime) {
-		Now = fakeTime;
+	function makeProposal(uint orgNum, string name) {
+		address prop = new Proposal(orgNum, name);
+		organizations[orgNum].proposals.push(prop);
+		organizations[orgNum].numProposals++;
 	}
 
-	function makeProposal(string name, uint startTime, uint endTime) {
-		if( msg.sender != organizer ) { return; }
-		if( startTime < Now + minNotice ) { return; }
-		address prop = new Proposal(name, startTime, endTime);
-		proposals.push(prop);		
-		propResults[prop] = -1;
-		numProposals++;
+	function addMember(uint orgNum,address newMember) {
+		if(msg.sender != organizations[orgNum].organizer) { return; }
+		organizations[orgNum].members[newMember] = true;
+		organizations[orgNum].numMembers++;
+		organizations[orgNum].balances[newMember] = 0;
+		giveTokens(orgNum, organizations[orgNum].base_tokens, newMember);
 	}
 
-	function addMember(address newMember) {
-		if(msg.sender != organizer) { return; }
-		members[newMember] = true;
-		numMembers++;
-		balances[newMember] = 0;
-		giveTokens(base_tokens, newMember);
+	function removeMember(uint orgNum, address member) {
+		if(msg.sender != organizations[orgNum].organizer || !organizations[orgNum].members[member]) { return; }
+		organizations[orgNum].members[member] = false;
+		organizations[orgNum].numMembers--;
+		organizations[orgNum].token_count -= organizations[orgNum].balances[member];
+		organizations[orgNum].balances[member] = 0;
 	}
 
-	function removeMember(address member) {
-		if(msg.sender != organizer || !members[member]) { return; }
-		members[member] = false;
-		numMembers--;
-		token_count -= balances[member];
-		balances[member] = 0;
+	function giveTokens(uint orgNum, uint amount, address dest) {
+		organizations[orgNum].token_count += amount;
+		organizations[orgNum].balances[dest] += amount;
 	}
 
-	function giveTokens(uint amount, address dest) {
-		token_count += amount;
-		balances[dest] += amount;
-	}
-
-	function vote(bool vote, uint weight, address proposal) {
-
-		if( !members[msg.sender] ) { return; }
-		if( balances[msg.sender] < 1) { return; }
+	function vote(uint orgNum, bool vote, uint weight, address proposal) {
+		if( !organizations[orgNum].members[msg.sender] ) { return; }
+		if( organizations[orgNum].balances[msg.sender] < 1) { return; }
 		if( weight < 1 ) { return; }
-		if( weight*weight > balances[msg.sender] ) { return; }
+		if( weight*weight > organizations[orgNum].balances[msg.sender] ) { return; }
 		Proposal prop = Proposal(proposal);
 
 		if( Now >= prop.startTime() && Now < prop.endTime() ) {
-			balances[msg.sender] -= weight*weight;
+			organizations[orgNum].balances[msg.sender] -= weight*weight;
 			prop.vote(vote, weight, msg.sender);
 		}
 	}
 
-	function dispatchBalance(address proposal) {
+	function dispatchBalance(uint orgNum, address proposal) {
 		Proposal p = Proposal(proposal);
 		for(var i=0; i < p.nbVoters(); i++) {
-			balances[p.voted(i)] += (p.bal() / p.nbVoters());	
+			organizations[orgNum].balances[p.voted(i)] += (p.bal() / p.nbVoters());	
 		}
 	}
 	
@@ -90,9 +88,8 @@ contract Organization {  // can be killed, so the owner gets sent the money in t
 	}
 
 	function destroy() {
-		if (msg.sender == organizer) { // without this funds could be locked in the contract forever!
-			suicide(organizer);
+		if (msg.sender == owner) { // without this funds could be locked in the contract forever!
+			suicide(owner);
 		}
 	}
-
 }

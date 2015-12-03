@@ -163,7 +163,7 @@
     "panecycle": {
         "json()": [
             "tab1",
-            "tab9"
+            "tab7"
         ]
     },
     "panels": {
@@ -230,17 +230,13 @@
     },
     "tabs": {
         "json()": {
-            "focus": "/config/test/Organization.sol.js",
+            "focus": "/contracts/Proposal.sol",
             "meta": {
                 "accessList": [
-                    "tab9",
-                    "tab5",
                     "tab7",
-                    "tab11",
-                    "tab10",
+                    "tab5",
                     "tab3",
-                    "tab0",
-                    "tab4"
+                    "tab0"
                 ]
             },
             "name": "pane0",
@@ -291,13 +287,12 @@
                     "name": "tab5",
                     "path": "/contracts/Organization.sol",
                     "className": [
-                        "tab5",
-                        "changed"
+                        "tab5"
                     ],
                     "document": {
-                        "changed": true,
+                        "changed": false,
                         "meta": {
-                            "timestamp": 1449161255843
+                            "timestamp": 1449167933164
                         },
                         "filter": true,
                         "title": "Organization.sol",
@@ -313,7 +308,8 @@
                     "path": "/contracts/Proposal.sol",
                     "className": [
                         "tab7",
-                        "changed"
+                        "changed",
+                        "focus"
                     ],
                     "document": {
                         "changed": true,
@@ -326,111 +322,7 @@
                         "ace": {}
                     },
                     "editorType": "ace",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab4",
-                    "path": "/test/organization.js",
-                    "className": [
-                        "tab4"
-                    ],
-                    "document": {
-                        "filter": true,
-                        "title": "organization.js",
-                        "tooltip": "/test/organization.js",
-                        "ace": {
-                            "folds": [],
-                            "scrolltop": 0,
-                            "scrollleft": 0,
-                            "selection": {
-                                "start": {
-                                    "row": 0,
-                                    "column": 0
-                                },
-                                "end": {
-                                    "row": 352,
-                                    "column": 0
-                                },
-                                "isBackwards": false
-                            },
-                            "options": {
-                                "guessTabSize": true,
-                                "useWrapMode": false,
-                                "wrapToView": true
-                            },
-                            "firstLineState": 0
-                        },
-                        "hash": "009aced19f1541491c89529685c935455cdcebe3",
-                        "meta": {
-                            "timestamp": 1449120238784
-                        },
-                        "changed": false
-                    },
-                    "editorType": "ace",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab9",
-                    "path": "/config/test/Organization.sol.js",
-                    "className": [
-                        "tab9",
-                        "changed",
-                        "focus"
-                    ],
-                    "document": {
-                        "changed": true,
-                        "meta": {
-                            "timestamp": 1449120917278
-                        },
-                        "filter": true,
-                        "title": "Organization.sol.js",
-                        "tooltip": "/config/test/Organization.sol.js",
-                        "ace": {}
-                    },
-                    "editorType": "ace",
                     "active": true
-                },
-                {
-                    "type": "tab",
-                    "name": "tab10",
-                    "path": "/config/test/Proposal.sol.js",
-                    "className": [
-                        "tab10"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1449160742126
-                        },
-                        "filter": true,
-                        "title": "Proposal.sol.js",
-                        "tooltip": "/config/test/Proposal.sol.js",
-                        "ace": {}
-                    },
-                    "editorType": "ace",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab11",
-                    "path": "/config/development/Organization.sol.js",
-                    "className": [
-                        "tab11"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1449160768100
-                        },
-                        "filter": true,
-                        "title": "Organization.sol.js",
-                        "tooltip": "/config/development/Organization.sol.js",
-                        "ace": {}
-                    },
-                    "editorType": "ace",
-                    "active": false
                 }
             ],
             "skin": "editor_tab",
