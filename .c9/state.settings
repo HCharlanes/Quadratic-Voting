@@ -203,7 +203,7 @@
         }
     },
     "projecttree": {
-        "@scrollpos": 88,
+        "@scrollpos": -10,
         "@showfs": true,
         "expanded": {
             "json()": [
@@ -230,7 +230,7 @@
     },
     "tabs": {
         "json()": {
-            "focus": "tab1",
+            "focus": "/contracts/Proposal.sol",
             "meta": {
                 "accessList": [
                     "tab7",
@@ -312,12 +312,12 @@
                     "path": "/contracts/Proposal.sol",
                     "className": [
                         "tab7",
-                        "changed"
+                        "focus"
                     ],
                     "document": {
-                        "changed": true,
+                        "changed": false,
                         "meta": {
-                            "timestamp": 1449162427162
+                            "timestamp": 1449163228161
                         },
                         "filter": true,
                         "title": "Proposal.sol",
