@@ -1,3 +1,4 @@
+import "Organization";
 contract Proposal {
 	address owner;
 	string public name;
@@ -35,11 +36,12 @@ contract Proposal {
 		return;
 	}
 	
+	//We should allow for a supermajority as well- return the ratio of forVotes to againstVotes and let the organization decides what that means
 	function Results() returns (int result) {
 		if( Now < endTime ) { return; }
 		if(forVotes > againstVotes)
-		return 1;
-		return 0;
+		return forVotes/againstVotes;
+		return againstVotes/forVotes * -1;
 	}
 	
 	function destroy() {
