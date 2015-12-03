@@ -27,9 +27,8 @@
         "json()": {
             "meta": {
                 "accessList": [
-                    "tab6",
-                    "tab8",
                     "tab1",
+                    "tab8",
                     "tab2"
                 ]
             },
@@ -40,9 +39,11 @@
                     "name": "tab1",
                     "path": "",
                     "className": [
-                        "tab1"
+                        "tab1",
+                        "focus"
                     ],
                     "document": {
+                        "changed": false,
                         "meta": {},
                         "filter": true,
                         "title": "bash - \"c4301f299bab\"",
@@ -50,13 +51,12 @@
                         "terminal": {
                             "id": "devel_986",
                             "cwd": "",
-                            "width": 0,
-                            "height": 0
-                        },
-                        "changed": false
+                            "width": 1094,
+                            "height": 127
+                        }
                     },
                     "editorType": "terminal",
-                    "active": false
+                    "active": true
                 },
                 {
                     "type": "tab",
@@ -103,30 +103,6 @@
                 },
                 {
                     "type": "tab",
-                    "name": "tab6",
-                    "path": "",
-                    "className": [
-                        "tab6",
-                        "focus"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {},
-                        "filter": true,
-                        "title": "bash - \"c4301f299bab\"",
-                        "tooltip": "bash - \"c4301f299bab\"",
-                        "terminal": {
-                            "id": "devel_851",
-                            "cwd": "",
-                            "width": 1094,
-                            "height": 127
-                        }
-                    },
-                    "editorType": "terminal",
-                    "active": true
-                },
-                {
-                    "type": "tab",
                     "name": "tab8",
                     "path": "",
                     "className": [],
@@ -166,7 +142,7 @@
             "@menu": 5,
             "@menuitem": 13,
             "@pane": 2,
-            "@session": 9,
+            "@session": 10,
             "@tab": 12,
             "@undoManager": 12,
             "@welcome": 1
@@ -186,8 +162,8 @@
     },
     "panecycle": {
         "json()": [
-            "tab6",
-            "tab5"
+            "tab1",
+            "tab7"
         ]
     },
     "panels": {
@@ -254,11 +230,11 @@
     },
     "tabs": {
         "json()": {
-            "focus": "/contracts/Organization.sol",
+            "focus": "tab1",
             "meta": {
                 "accessList": [
-                    "tab5",
                     "tab7",
+                    "tab5",
                     "tab11",
                     "tab10",
                     "tab3",
@@ -315,13 +291,12 @@
                     "name": "tab5",
                     "path": "/contracts/Organization.sol",
                     "className": [
-                        "tab5",
-                        "focus"
+                        "tab5"
                     ],
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1449125060741
+                            "timestamp": 1449161255843
                         },
                         "filter": true,
                         "title": "Organization.sol",
@@ -329,19 +304,20 @@
                         "ace": {}
                     },
                     "editorType": "ace",
-                    "active": true
+                    "active": false
                 },
                 {
                     "type": "tab",
                     "name": "tab7",
                     "path": "/contracts/Proposal.sol",
                     "className": [
-                        "tab7"
+                        "tab7",
+                        "changed"
                     ],
                     "document": {
-                        "changed": false,
+                        "changed": true,
                         "meta": {
-                            "timestamp": 1449161142827
+                            "timestamp": 1449162427162
                         },
                         "filter": true,
                         "title": "Proposal.sol",
@@ -349,7 +325,7 @@
                         "ace": {}
                     },
                     "editorType": "ace",
-                    "active": false
+                    "active": true
                 },
                 {
                     "type": "tab",
