@@ -163,7 +163,7 @@
     "panecycle": {
         "json()": [
             "tab1",
-            "tab7"
+            "tab9"
         ]
     },
     "panels": {
@@ -203,7 +203,7 @@
         }
     },
     "projecttree": {
-        "@scrollpos": -10,
+        "@scrollpos": 88,
         "@showfs": true,
         "expanded": {
             "json()": [
@@ -230,15 +230,15 @@
     },
     "tabs": {
         "json()": {
-            "focus": "/contracts/Proposal.sol",
+            "focus": "/config/test/Organization.sol.js",
             "meta": {
                 "accessList": [
-                    "tab7",
+                    "tab9",
                     "tab5",
+                    "tab7",
                     "tab11",
                     "tab10",
                     "tab3",
-                    "tab9",
                     "tab0",
                     "tab4"
                 ]
@@ -291,10 +291,11 @@
                     "name": "tab5",
                     "path": "/contracts/Organization.sol",
                     "className": [
-                        "tab5"
+                        "tab5",
+                        "changed"
                     ],
                     "document": {
-                        "changed": false,
+                        "changed": true,
                         "meta": {
                             "timestamp": 1449161255843
                         },
@@ -312,10 +313,10 @@
                     "path": "/contracts/Proposal.sol",
                     "className": [
                         "tab7",
-                        "focus"
+                        "changed"
                     ],
                     "document": {
-                        "changed": false,
+                        "changed": true,
                         "meta": {
                             "timestamp": 1449163228161
                         },
@@ -325,7 +326,7 @@
                         "ace": {}
                     },
                     "editorType": "ace",
-                    "active": true
+                    "active": false
                 },
                 {
                     "type": "tab",
@@ -375,7 +376,8 @@
                     "path": "/config/test/Organization.sol.js",
                     "className": [
                         "tab9",
-                        "changed"
+                        "changed",
+                        "focus"
                     ],
                     "document": {
                         "changed": true,
@@ -388,7 +390,7 @@
                         "ace": {}
                     },
                     "editorType": "ace",
-                    "active": false
+                    "active": true
                 },
                 {
                     "type": "tab",
@@ -438,7 +440,7 @@
     },
     "tree_selection": {
         "json()": [
-            "/dapp/contracts"
+            "/config/test/Organization.sol.js"
         ]
     }
 }
