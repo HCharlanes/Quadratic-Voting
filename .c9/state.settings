@@ -1,4 +1,14 @@
 {
+    "breakpoints": {
+        "json()": []
+    },
+    "collab": {
+        "panel": {
+            "notifications": {
+                "@closed": true
+            }
+        }
+    },
     "console": {
         "@expanded": true,
         "@height": "153",
@@ -21,8 +31,6 @@
                         "tab1"
                     ],
                     "document": {
-                        "changed": false,
-                        "meta": {},
                         "filter": true,
                         "title": "bash - \"c4301f299bab\"",
                         "tooltip": "bash - \"c4301f299bab\"",
@@ -30,8 +38,12 @@
                             "id": "devel_986",
                             "cwd": "",
                             "width": 1094,
-                            "height": 127
-                        }
+                            "height": 127,
+                            "scrollTop": -5
+                        },
+                        "hash": "67452301efcdab8998badcfe10325476c3d2e1f0",
+                        "meta": {},
+                        "changed": false
                     },
                     "editorType": "terminal",
                     "active": false
@@ -42,9 +54,36 @@
                     "path": "",
                     "className": [],
                     "document": {
-                        "title": "Immediate",
-                        "meta": {},
                         "filter": true,
+                        "title": "Immediate",
+                        "tooltip": "Immediate (Javascript (browser))",
+                        "immediate": {
+                            "folds": [],
+                            "scrolltop": 0,
+                            "scrollleft": 0,
+                            "selection": {
+                                "start": {
+                                    "row": 2,
+                                    "column": 0
+                                },
+                                "end": {
+                                    "row": 2,
+                                    "column": 0
+                                },
+                                "isBackwards": false
+                            },
+                            "options": {
+                                "guessTabSize": true,
+                                "useWrapMode": false,
+                                "wrapToView": true
+                            },
+                            "firstLineState": 0,
+                            "type": "jsbrowser",
+                            "history": [],
+                            "pos": 0
+                        },
+                        "hash": "bc37e9908b413249fe666f189265c03143e4d841",
+                        "meta": {},
                         "changed": false
                     },
                     "editorType": "immediate",
@@ -60,15 +99,14 @@
                     ],
                     "document": {
                         "changed": false,
-                        "meta": {
-                            "timestamp": 1449083120426
-                        },
+                        "meta": {},
                         "filter": true,
-                        "title": "Terminal",
+                        "title": "bash - \"c4301f299bab\"",
+                        "tooltip": "bash - \"c4301f299bab\"",
                         "terminal": {
                             "id": "devel_851",
                             "cwd": "",
-                            "width": 1094,
+                            "width": 844,
                             "height": 127
                         }
                     },
@@ -91,15 +129,15 @@
         "counters": {
             "@ace": 1,
             "@acestatus": 1,
-            "@divider": 4,
-            "@document": 8,
+            "@divider": 5,
+            "@document": 10,
             "@form": 5,
-            "@menu": 5,
-            "@menuitem": 13,
+            "@menu": 8,
+            "@menuitem": 20,
             "@pane": 2,
-            "@session": 6,
-            "@tab": 8,
-            "@undoManager": 8,
+            "@session": 7,
+            "@tab": 11,
+            "@undoManager": 10,
             "@welcome": 1
         }
     },
@@ -123,6 +161,7 @@
     },
     "panels": {
         "@active-left": "tree",
+        "@active-right": "collab",
         "collab": {
             "@enabled": "true",
             "@name": "collab"
@@ -163,9 +202,13 @@
                 "/",
                 "/dapp",
                 "/dapp/contracts",
-                "/contracts"
+                "/contracts",
+                "/test"
             ]
         }
+    },
+    "recentfiles": {
+        "json()": []
     },
     "tabs": {
         "json()": {
@@ -174,9 +217,11 @@
                 "accessList": [
                     "tab5",
                     "tab7",
-                    "tab3",
+                    "tab9",
                     "tab0",
-                    "tab4"
+                    "tab3",
+                    "tab4",
+                    "tab8"
                 ]
             },
             "name": "pane0",
@@ -210,14 +255,36 @@
                         "tab3"
                     ],
                     "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1449006824676
-                        },
                         "filter": true,
                         "title": "QuadraticVoting.sol",
                         "tooltip": "/dapp/contracts/QuadraticVoting.sol",
-                        "ace": {}
+                        "ace": {
+                            "folds": [],
+                            "scrolltop": 0,
+                            "scrollleft": 0,
+                            "selection": {
+                                "start": {
+                                    "row": 25,
+                                    "column": 15
+                                },
+                                "end": {
+                                    "row": 25,
+                                    "column": 15
+                                },
+                                "isBackwards": false
+                            },
+                            "options": {
+                                "guessTabSize": true,
+                                "useWrapMode": false,
+                                "wrapToView": true
+                            },
+                            "firstLineState": 0
+                        },
+                        "hash": "301958a54dea0bfb4b3f3ced4961d507e6670002",
+                        "meta": {
+                            "timestamp": 1449086194979
+                        },
+                        "changed": false
                     },
                     "editorType": "ace",
                     "active": false
@@ -257,7 +324,7 @@
                         },
                         "hash": "35c7bb31029daa1c5b1fbc746b0e51871076053f",
                         "meta": {
-                            "timestamp": 1449006664505
+                            "timestamp": 1449086194979
                         },
                         "changed": false
                     },
@@ -275,7 +342,7 @@
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1449082966731
+                            "timestamp": 1449105403528
                         },
                         "filter": true,
                         "title": "Organization.sol",
@@ -295,11 +362,76 @@
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1449083956139
+                            "timestamp": 1449101883456
                         },
                         "filter": true,
                         "title": "Proposal.sol",
                         "tooltip": "/contracts/Proposal.sol",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab8",
+                    "path": "/app/index.html",
+                    "className": [
+                        "tab8"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "index.html",
+                        "tooltip": "/app/index.html",
+                        "ace": {
+                            "folds": [],
+                            "scrolltop": 0,
+                            "scrollleft": 0,
+                            "selection": {
+                                "start": {
+                                    "row": 0,
+                                    "column": 0
+                                },
+                                "end": {
+                                    "row": 0,
+                                    "column": 0
+                                },
+                                "isBackwards": false
+                            },
+                            "options": {
+                                "guessTabSize": true,
+                                "useWrapMode": false,
+                                "wrapToView": true
+                            },
+                            "firstLineState": {
+                                "row": 61,
+                                "mode": "ace/mode/html"
+                            }
+                        },
+                        "hash": "f4147377593e2b95c5f994d3ba2ce14e0a769770",
+                        "meta": {
+                            "timestamp": 1449086194983
+                        },
+                        "changed": false
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab9",
+                    "path": "/test/organization.js",
+                    "className": [
+                        "tab9"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1449111842353
+                        },
+                        "filter": true,
+                        "title": "organization.js",
+                        "tooltip": "/test/organization.js",
                         "ace": {}
                     },
                     "editorType": "ace",
