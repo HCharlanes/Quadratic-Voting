@@ -51,12 +51,12 @@ contract Proposal {
 		if (msg.sender == owner) { // without this funds could be locked in the contract forever!
 			suicide(owner);
 		}
+	}
 	function endVote() {
-	    if (now >= block.timestamp){
+	    if (Now >= endTime){
 	        uint averagePayment = funds/voters;
-	        for (uint i = 0; i < voters; i++){
-	            function do(){
-	                
+	        for (uint i = 0; i < nbVoters; i++){
+	            Organization(/*address here*/).giveTokens(voted[i], averagePayment);
 	            }
 	        }
 	    }
