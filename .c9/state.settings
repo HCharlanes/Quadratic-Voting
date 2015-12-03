@@ -22,7 +22,7 @@
     },
     "console": {
         "@expanded": true,
-        "@height": "153",
+        "@height": 286,
         "@maximized": "false",
         "json()": {
             "meta": {
@@ -51,8 +51,8 @@
                         "terminal": {
                             "id": "devel_986",
                             "cwd": "",
-                            "width": 1094,
-                            "height": 127
+                            "width": 694,
+                            "height": 260
                         }
                     },
                     "editorType": "terminal",
@@ -66,37 +66,18 @@
                         "tab2"
                     ],
                     "document": {
+                        "changed": false,
+                        "meta": {},
                         "filter": true,
                         "title": "Immediate (Javascript (browser))",
                         "tooltip": "Immediate (Javascript (browser))",
                         "immediate": {
-                            "folds": [],
-                            "scrolltop": 0,
-                            "scrollleft": 0,
-                            "selection": {
-                                "start": {
-                                    "row": 2,
-                                    "column": 0
-                                },
-                                "end": {
-                                    "row": 2,
-                                    "column": 0
-                                },
-                                "isBackwards": false
-                            },
-                            "options": {
-                                "guessTabSize": true,
-                                "useWrapMode": false,
-                                "wrapToView": true
-                            },
-                            "firstLineState": 0,
                             "type": "jsbrowser",
-                            "history": [],
-                            "pos": 0
-                        },
-                        "hash": "bc37e9908b413249fe666f189265c03143e4d841",
-                        "meta": {},
-                        "changed": false
+                            "history": [
+                                "web3.eth"
+                            ],
+                            "pos": -1
+                        }
                     },
                     "editorType": "immediate",
                     "active": false
@@ -132,19 +113,19 @@
     },
     "ext": {
         "counters": {
-            "@ace": 1,
+            "@ace": 2,
             "@acestatus": 1,
-            "@divider": 4,
-            "@document": 12,
+            "@divider": 9,
+            "@document": 17,
             "@ethereum-console": 1,
-            "@form": 5,
+            "@form": 6,
             "@immediate": 1,
-            "@menu": 5,
-            "@menuitem": 13,
+            "@menu": 12,
+            "@menuitem": 38,
             "@pane": 2,
-            "@session": 10,
-            "@tab": 12,
-            "@undoManager": 12,
+            "@session": 17,
+            "@tab": 17,
+            "@undoManager": 17,
             "@welcome": 1
         }
     },
@@ -155,10 +136,13 @@
         "@wholeword": "false"
     },
     "menus": {
-        "@minimized": "false"
+        "@minimized": false
     },
     "nak": {
         "@installed": true
+    },
+    "openfiles": {
+        "@hidetree": false
     },
     "panecycle": {
         "json()": [
@@ -168,7 +152,7 @@
     },
     "panels": {
         "@active-left": "tree",
-        "@active-right": "none",
+        "@active-right": "ethergit.ethereum.sandbox.panel",
         "collab": {
             "@enabled": "true",
             "@name": "collab"
@@ -203,7 +187,7 @@
         }
     },
     "projecttree": {
-        "@scrollpos": 88,
+        "@scrollpos": 28,
         "@showfs": true,
         "expanded": {
             "json()": [
@@ -214,7 +198,9 @@
                 "/config",
                 "/config/test",
                 "/config/development",
-                "/config/production"
+                "/config/production",
+                "/dapp/contracts",
+                "/app"
             ]
         }
     },
@@ -224,19 +210,20 @@
     "search-history": {
         "search": {
             "json()": [
+                "proposals",
                 "toTime"
             ]
         }
     },
     "tabs": {
         "json()": {
-            "focus": "/contracts/Proposal.sol",
+            "focus": "tab1",
             "meta": {
                 "accessList": [
                     "tab7",
-                    "tab5",
-                    "tab3",
-                    "tab0"
+                    "tab13",
+                    "tab0",
+                    "tab12"
                 ]
             },
             "name": "pane0",
@@ -249,57 +236,16 @@
                         "tab0"
                     ],
                     "document": {
-                        "filter": true,
-                        "title": "Welcome",
-                        "welcome": {},
-                        "hash": "67452301efcdab8998badcfe10325476c3d2e1f0",
+                        "changed": false,
                         "meta": {
                             "welcome": true,
                             "timestamp": 1449006785111
                         },
-                        "changed": false
+                        "filter": true,
+                        "title": "Welcome",
+                        "welcome": {}
                     },
                     "editorType": "welcome",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab3",
-                    "path": "/dapp/contracts/QuadraticVoting.sol",
-                    "className": [
-                        "tab3"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1449086194979
-                        },
-                        "filter": true,
-                        "title": "QuadraticVoting.sol",
-                        "tooltip": "/dapp/contracts/QuadraticVoting.sol",
-                        "ace": {}
-                    },
-                    "editorType": "ace",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab5",
-                    "path": "/contracts/Organization.sol",
-                    "className": [
-                        "tab5"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1449167933164
-                        },
-                        "filter": true,
-                        "title": "Organization.sol",
-                        "tooltip": "/contracts/Organization.sol",
-                        "ace": {}
-                    },
-                    "editorType": "ace",
                     "active": false
                 },
                 {
@@ -307,14 +253,12 @@
                     "name": "tab7",
                     "path": "/contracts/Proposal.sol",
                     "className": [
-                        "tab7",
-                        "changed",
-                        "focus"
+                        "tab7"
                     ],
                     "document": {
-                        "changed": true,
+                        "changed": false,
                         "meta": {
-                            "timestamp": 1449163228161
+                            "timestamp": 1449168077272
                         },
                         "filter": true,
                         "title": "Proposal.sol",
@@ -323,6 +267,26 @@
                     },
                     "editorType": "ace",
                     "active": true
+                },
+                {
+                    "type": "tab",
+                    "name": "tab13",
+                    "path": "/config/test/Example.sol.js",
+                    "className": [
+                        "tab13"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1449176354290
+                        },
+                        "filter": true,
+                        "title": "Example.sol.js",
+                        "tooltip": "/config/test/Example.sol.js",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
                 }
             ],
             "skin": "editor_tab",
@@ -332,7 +296,12 @@
     },
     "tree_selection": {
         "json()": [
-            "/config/test/Organization.sol.js"
+            "/dapp/contracts/Proposal.sol"
+        ]
+    },
+    "watches": {
+        "json()": [
+            "organization"
         ]
     }
 }

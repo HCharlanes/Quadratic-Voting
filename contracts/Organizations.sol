@@ -1,7 +1,7 @@
 import "Proposal.sol";
 contract Organizations {  // can be killed, so the owner gets sent the money in the end
 uint Now = now;
-uint owner;
+address owner;
     function Organizations(){
         owner = msg.sender;
     }
@@ -21,12 +21,12 @@ struct Organization{
 	event DeletedMember(address _old); // so you can log the event
 	
 	function NewOrganization(string name) {
-	    uint newOrg = organizations.push();
-		newOrg.name = name;
-		newOrg.organizer = msg.sender;		
-		newOrg.token_count = 0;
-		newOrg.numMembers = 0;
-		newOrg.numProposals = 0;
+	    uint newOrg = organizations.push(organizations.length);
+		organizations[newOrg].name = name;
+		organizations[newOrg].organizer = msg.sender;		
+		organizations[newOrg].token_count = 0;
+		organizations[newOrg].numMembers = 0;
+		organizations[newOrg].numProposals = 0;
 		return newOrg;
 	}
 
@@ -76,7 +76,7 @@ struct Organization{
 			organizations[orgNum].balances[p.voted(i)] += (p.bal() / p.nbVoters());	
 		}
 	}
-	
+	/*
 	function getResult (address proposalAddress) {
 		if (propResults[proposalAddress] != -1) { return; }
 		Proposal p = Proposal(proposalAddress);
@@ -86,6 +86,7 @@ struct Organization{
 			p.destroy();
 		}
 	}
+	*/
 
 	function destroy() {
 		if (msg.sender == owner) { // without this funds could be locked in the contract forever!
