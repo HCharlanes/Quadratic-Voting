@@ -1,4 +1,3 @@
-import "Organization";
 contract Proposal {
 	uint organization;
 	address owner;

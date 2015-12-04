@@ -18,7 +18,7 @@
   },
   "deploy": [
     // Names of contracts that should be deployed to the network.
-    "Organization", "Proposal"
+    "Organizations", "Proposal"
   ],
   "rpc": {
     // Default RPC configuration.

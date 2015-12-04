@@ -1,4 +1,4 @@
-import "Proposal.sol";
+import "Proposal";
 contract Organizations {  // can be killed, so the owner gets sent the money in the end
 uint Now = now;
 address owner;
@@ -6,7 +6,7 @@ address owner;
         owner = msg.sender;
     }
 struct Organization{
-	byte name;
+	string name;
 	address organizer;
 	mapping (address => bool) members;
 	mapping (address => uint) balances;
@@ -20,8 +20,8 @@ struct Organization{
 	event NewMember(address _new); // so you can log the event
 	event DeletedMember(address _old); // so you can log the event
 	
-	function NewOrganization(string name) {
-	    uint newOrg = organizations.push(organizations.length);
+	function NewOrganization(string name) returns (uint Org){
+	   	uint newOrg = organizations.length;
 		organizations[newOrg].name = name;
 		organizations[newOrg].organizer = msg.sender;		
 		organizations[newOrg].token_count = 0;
@@ -30,8 +30,8 @@ struct Organization{
 		return newOrg;
 	}
 
-	function makeProposal(uint orgNum, string name) {
-		address prop = new Proposal(orgNum, name);
+	function makeProposal(uint orgNum, string name, string description, uint starttime, uint endtime) {
+		address prop = new Proposal(orgNum, name, description, starttime, endtime);
 		organizations[orgNum].proposals.push(prop);
 		organizations[orgNum].numProposals++;
 	}
