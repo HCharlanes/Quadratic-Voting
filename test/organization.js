@@ -1,37 +1,27 @@
-contract('organization', function(accounts) {
+contract('Organizations', function(accounts) {
   console.log(accounts);
-  var organizer = accounts[0];
+  var creator = accounts[0];
   var member1 = accounts[1];
   var member2 = accounts[2];
 
-  it("Initial organization settings should match", function(done) {
+  it("The person who creates the contract should be the owner", function(done) {
 
-    var o = Organization.at(Organization.deployed_address);
+    var o = Organizations.at(Organizations.deployed_address);
     
-    Organization.new({from: organizer}).then(
-      function(organization) {
-        organization.token_count.call().then(
-          function(count) { 
-            assert.equal(count, 0, "Count doesn't match!"); 
-        }).then(
-          function() { 
-            return organization.numMembers.call(); 
-        }).then(
-          function(num) { 
-            assert.equal(num, 0, "Members doesn't match!");
-            return organization.organizer.call();
-        }).then(
-          function(organizer) { 
-            assert.equal(organizer, organizer, "Organizer doesn't match!");
+    Organizations.new({from: creator}).then(
+      function(contract) {
+        contract.owner.call().then(
+          function(createdBy) { 
+            assert.equal(createdBy, creator, "Owner address is wrong!"); 
             done();
+          }).catch(done);
         }).catch(done);
-    }).catch(done);
   });
 
   it("Should update token_count, numMembers and balance upon adding member", function(done) {
-    var o = Organization.at(Organization.deployed_address);
+    var o = Organizations.at(Organization.deployed_address);
     
-    Organization.new({from: organizer}).then(
+    o.new({from: organizer}).then(
       function(organization) {
         organization.token_count.call().then(
           function(count) { 

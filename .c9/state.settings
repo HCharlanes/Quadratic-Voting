@@ -25,16 +25,17 @@
     },
     "console": {
         "@expanded": true,
-        "@height": 286,
+        "@height": 158,
         "@maximized": "false",
         "json()": {
             "meta": {
                 "accessList": [
                     "tab14",
+                    "tab2",
+                    "tab8",
                     "tab22",
                     "tab1",
-                    "tab8",
-                    "tab2"
+                    "tab17"
                 ]
             },
             "name": "pane1",
@@ -56,7 +57,7 @@
                             "id": "devel_986",
                             "cwd": "",
                             "width": 1001,
-                            "height": 260
+                            "height": 132
                         }
                     },
                     "editorType": "terminal",
@@ -70,39 +71,19 @@
                         "tab2"
                     ],
                     "document": {
+                        "changed": false,
+                        "meta": {},
                         "filter": true,
                         "title": "Immediate (Javascript (browser))",
                         "tooltip": "Immediate (Javascript (browser))",
                         "immediate": {
-                            "folds": [],
-                            "scrolltop": 0,
-                            "scrollleft": 0,
-                            "selection": {
-                                "start": {
-                                    "row": 4,
-                                    "column": 0
-                                },
-                                "end": {
-                                    "row": 4,
-                                    "column": 0
-                                },
-                                "isBackwards": false
-                            },
-                            "options": {
-                                "guessTabSize": true,
-                                "useWrapMode": false,
-                                "wrapToView": true
-                            },
-                            "firstLineState": 0,
                             "type": "jsbrowser",
                             "history": [
+                                "console.log(web3)",
                                 "web3.eth"
                             ],
                             "pos": -1
-                        },
-                        "hash": "57de150be6e140f026d3a0032b7aed2eb2581692",
-                        "meta": {},
-                        "changed": false
+                        }
                     },
                     "editorType": "immediate",
                     "active": false
@@ -133,13 +114,13 @@
                         "changed": false,
                         "meta": {},
                         "filter": true,
-                        "title": "node - \"c4301f299bab\"",
-                        "tooltip": "node - \"c4301f299bab\"",
+                        "title": "bash - \"c4301f299bab\"",
+                        "tooltip": "bash - \"c4301f299bab\"",
                         "terminal": {
                             "id": "devel_534",
                             "cwd": "",
                             "width": 1001,
-                            "height": 260
+                            "height": 132
                         }
                     },
                     "editorType": "terminal",
@@ -165,11 +146,38 @@
                             "id": "devel_669",
                             "cwd": "",
                             "width": 1001,
-                            "height": 260
+                            "height": 132
                         }
                     },
                     "editorType": "terminal",
                     "active": true
+                },
+                {
+                    "type": "tab",
+                    "name": "tab17",
+                    "path": "",
+                    "className": [
+                        "tab17"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1449259704951
+                        },
+                        "filter": true,
+                        "title": "Immediate (Javascript (browser))",
+                        "tooltip": "Immediate (Javascript (browser))",
+                        "immediate": {
+                            "type": "jsbrowser",
+                            "history": [
+                                "console.log(web3)",
+                                "console.log(\"hello\")"
+                            ],
+                            "pos": -1
+                        }
+                    },
+                    "editorType": "immediate",
+                    "active": false
                 }
             ],
             "skin": "editor_tab",
@@ -185,19 +193,21 @@
     },
     "ext": {
         "counters": {
-            "@ace": 1,
+            "@ace": 2,
             "@acestatus": 1,
             "@divider": 9,
-            "@document": 22,
+            "@document": 28,
             "@ethereum-console": 1,
             "@form": 6,
-            "@immediate": 2,
+            "@immediate": 1,
             "@menu": 12,
             "@menuitem": 38,
             "@pane": 2,
-            "@session": 21,
-            "@tab": 15,
-            "@undoManager": 22,
+            "@postmessage": 1,
+            "@preview": 1,
+            "@session": 28,
+            "@tab": 20,
+            "@undoManager": 28,
             "@welcome": 1
         }
     },
@@ -219,7 +229,7 @@
     "panecycle": {
         "json()": [
             "tab14",
-            "tab5"
+            "tab15"
         ]
     },
     "panels": {
@@ -272,10 +282,8 @@
                 "/node_modules/web3/lib",
                 "/app/app/javascripts",
                 "/dapp/_pre",
-                "/build",
                 "/contracts",
-                "/config",
-                "/config/development"
+                "/config/test"
             ]
         }
     },
@@ -293,194 +301,18 @@
     },
     "tabs": {
         "json()": {
-            "focus": "/config/development/Organizations.sol.js",
+            "focus": "/test/organization.js",
             "meta": {
                 "accessList": [
-                    "tab5",
+                    "tab15",
                     "tab23",
-                    "tab7",
-                    "tab12",
-                    "tab4",
-                    "tab6",
-                    "tab11",
+                    "tab16",
                     "tab19",
-                    "tab10",
-                    "tab3",
-                    "tab0",
-                    "tab18",
-                    "tab13",
-                    "tab20",
                     "tab24"
                 ]
             },
             "name": "pane0",
             "nodes": [
-                {
-                    "type": "tab",
-                    "name": "tab0",
-                    "path": "",
-                    "className": [
-                        "tab0"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "welcome": true
-                        },
-                        "filter": true,
-                        "title": "Welcome",
-                        "welcome": {}
-                    },
-                    "editorType": "welcome",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab7",
-                    "path": "/contracts/Proposal.sol",
-                    "className": [
-                        "tab7"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1449254846944
-                        },
-                        "filter": true,
-                        "title": "Proposal.sol",
-                        "tooltip": "/contracts/Proposal.sol",
-                        "ace": {}
-                    },
-                    "editorType": "ace",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab13",
-                    "path": "/config/test/Example.sol.js",
-                    "className": [
-                        "tab13"
-                    ],
-                    "document": {
-                        "filter": true,
-                        "title": "Example.sol.js",
-                        "tooltip": "/config/test/Example.sol.js",
-                        "ace": {
-                            "folds": [],
-                            "scrolltop": 0,
-                            "scrollleft": 0.5,
-                            "selection": {
-                                "start": {
-                                    "row": 0,
-                                    "column": 0
-                                },
-                                "end": {
-                                    "row": 0,
-                                    "column": 0
-                                },
-                                "isBackwards": false
-                            },
-                            "options": {
-                                "guessTabSize": true,
-                                "useWrapMode": false,
-                                "wrapToView": true
-                            },
-                            "firstLineState": 0
-                        },
-                        "hash": "803044ff302f021681a9581a6cad87c6677540f4",
-                        "meta": {
-                            "timestamp": 1449086194983
-                        },
-                        "changed": false
-                    },
-                    "editorType": "ace",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab18",
-                    "path": "/app/index.html",
-                    "className": [
-                        "tab18"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1449205059073
-                        },
-                        "filter": true,
-                        "title": "index.html",
-                        "tooltip": "/app/index.html",
-                        "ace": {}
-                    },
-                    "editorType": "ace",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab19",
-                    "path": "/app/javascripts/app.js",
-                    "className": [
-                        "tab19"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1449086194983
-                        },
-                        "filter": true,
-                        "title": "app.js",
-                        "tooltip": "/app/javascripts/app.js",
-                        "ace": {}
-                    },
-                    "editorType": "ace",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab20",
-                    "path": "/app/stylesheets/app.css",
-                    "className": [
-                        "tab20"
-                    ],
-                    "document": {
-                        "filter": true,
-                        "title": "app.css",
-                        "tooltip": "/app/stylesheets/app.css",
-                        "ace": {
-                            "folds": [],
-                            "scrolltop": 0,
-                            "scrollleft": 0,
-                            "selection": {
-                                "start": {
-                                    "row": 0,
-                                    "column": 0
-                                },
-                                "end": {
-                                    "row": 0,
-                                    "column": 0
-                                },
-                                "isBackwards": false
-                            },
-                            "options": {
-                                "guessTabSize": true,
-                                "useWrapMode": false,
-                                "wrapToView": true
-                            },
-                            "firstLineState": {
-                                "row": 7,
-                                "mode": "ace/mode/css"
-                            }
-                        },
-                        "hash": "67452301efcdab8998badcfe10325476c3d2e1f0",
-                        "meta": {
-                            "timestamp": 1449086194983
-                        },
-                        "changed": false
-                    },
-                    "editorType": "ace",
-                    "active": false
-                },
                 {
                     "type": "tab",
                     "name": "tab23",
@@ -503,60 +335,20 @@
                 },
                 {
                     "type": "tab",
-                    "name": "tab3",
-                    "path": "/config/test/Organization.sol.js",
+                    "name": "tab15",
+                    "path": "/test/organization.js",
                     "className": [
-                        "tab3"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1449086194983
-                        },
-                        "filter": true,
-                        "title": "Organization.sol.js",
-                        "tooltip": "/config/test/Organization.sol.js",
-                        "ace": {}
-                    },
-                    "editorType": "ace",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab4",
-                    "path": "/config/app.json",
-                    "className": [
-                        "tab4"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1449252213306
-                        },
-                        "filter": true,
-                        "title": "app.json",
-                        "tooltip": "/config/app.json",
-                        "ace": {}
-                    },
-                    "editorType": "ace",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab5",
-                    "path": "/config/development/Organizations.sol.js",
-                    "className": [
-                        "tab5",
+                        "tab15",
                         "focus"
                     ],
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1449253189998
+                            "timestamp": 1449264516271
                         },
                         "filter": true,
-                        "title": "Organizations.sol.js",
-                        "tooltip": "/config/development/Organizations.sol.js",
+                        "title": "organization.js",
+                        "tooltip": "/test/organization.js",
                         "ace": {}
                     },
                     "editorType": "ace",
@@ -564,79 +356,39 @@
                 },
                 {
                     "type": "tab",
-                    "name": "tab6",
-                    "path": "/config/development/config.json",
+                    "name": "tab16",
+                    "path": "/app/index.html",
                     "className": [
-                        "tab6"
+                        "tab16"
                     ],
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1449252263528
-                        },
-                        "filter": true,
-                        "title": "config.json",
-                        "tooltip": "/config/development/config.json",
-                        "ace": {}
-                    },
-                    "editorType": "ace",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab10",
-                    "path": "/config/production/config.json",
-                    "className": [
-                        "tab10"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1449253639124
-                        },
-                        "filter": true,
-                        "title": "config.json",
-                        "tooltip": "/config/production/config.json",
-                        "ace": {}
-                    },
-                    "editorType": "ace",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab11",
-                    "path": "/app/javascripts/browserify.js",
-                    "className": [
-                        "tab11"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1449253643933
-                        },
-                        "filter": true,
-                        "title": "browserify.js",
-                        "tooltip": "/app/javascripts/browserify.js",
-                        "ace": {}
-                    },
-                    "editorType": "ace",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab12",
-                    "path": "/build/index.html",
-                    "className": [
-                        "tab12"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1449254094245
+                            "timestamp": 1449259002815
                         },
                         "filter": true,
                         "title": "index.html",
-                        "tooltip": "/build/index.html",
+                        "tooltip": "/app/index.html",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab19",
+                    "path": "/config/app.json",
+                    "className": [
+                        "tab19"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1449263896999
+                        },
+                        "filter": true,
+                        "title": "app.json",
+                        "tooltip": "/config/app.json",
                         "ace": {}
                     },
                     "editorType": "ace",
@@ -650,7 +402,7 @@
     },
     "tree_selection": {
         "json()": [
-            "/config/development/Organizations.sol.js"
+            "/test/organization.js"
         ]
     },
     "watches": {
