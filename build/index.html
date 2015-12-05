@@ -4,11 +4,40 @@
 <html>
 <head>
   <title>Default Truffle App</title>
-  <link href="./app.css" rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js">
   <script src="./app.js"></script>
+  <script type="text/javascript">
+web3.eth.watch('chain').changed(function(){
+  var coinbase = web3.eth.coinbase;
+  document.getElementById('coinbase').innerText = coinbase;
+});
+  
+
+///Insert your contract address var here:
+ 
+
+///Second web3.eth.watch code to monitor block number
+  
+
+</script>
 </head>
 <body>
-  
+  <div class="header">
+    <h3>JavaScript API</h3>
+  </div>
+
+  <div class="jumbotron">
+    <h5>Coinbase Address: <strong id="coinbase"></strong></h5>
+    <h5>Balance: <strong id="balance"></strong></h5>
+    <h5>Latest Block Number: <strong id="latestBlock"></strong></h5>
+    <h5>Latest Block Timestamp: <strong id="latestBlockTimestamp"></strong></h5>
+    <h5>Latest Block Hash: <strong id="latestBlockHash"></strong></h5>
+    <h5>Contract String: <strong id="contractString"></strong></h5>
+    <h5>Favourite Python: <strong id="favouritePython"></strong></h5>
+    <br>
+  </div>
+
   <h1>Hello from Truffle!</h1>
   <h2>Commands available:</h2>
   <pre>
@@ -26,5 +55,6 @@
     test            => Run tests
     watch           => Watch project for changes and rebuild app automatically
   </pre>
+  
 </body>
 </html> 

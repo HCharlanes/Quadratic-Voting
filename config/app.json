@@ -22,7 +22,7 @@
   ],
   "rpc": {
     // Default RPC configuration.
-    "host": "localhost",
+    "host": "quadraticvoting.on.ether.camp",
     "port": 8545
   }
 }

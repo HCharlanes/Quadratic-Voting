@@ -26,15 +26,16 @@
     "console": {
         "@expanded": true,
         "@height": 158,
-        "@maximized": "false",
+        "@maximized": false,
         "json()": {
             "meta": {
                 "accessList": [
+                    "tab3",
                     "tab14",
-                    "tab2",
                     "tab8",
-                    "tab22",
                     "tab1",
+                    "tab4",
+                    "tab2",
                     "tab17"
                 ]
             },
@@ -95,7 +96,9 @@
                     "className": [],
                     "document": {
                         "changed": false,
-                        "meta": {},
+                        "meta": {
+                            "timestamp": 1449098709562
+                        },
                         "filter": true,
                         "title": "Ethereum Console",
                         "ethereum-console": {}
@@ -105,34 +108,10 @@
                 },
                 {
                     "type": "tab",
-                    "name": "tab22",
-                    "path": "",
-                    "className": [
-                        "tab22"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {},
-                        "filter": true,
-                        "title": "bash - \"c4301f299bab\"",
-                        "tooltip": "bash - \"c4301f299bab\"",
-                        "terminal": {
-                            "id": "devel_534",
-                            "cwd": "",
-                            "width": 1001,
-                            "height": 132
-                        }
-                    },
-                    "editorType": "terminal",
-                    "active": false
-                },
-                {
-                    "type": "tab",
                     "name": "tab14",
                     "path": "",
                     "className": [
-                        "tab14",
-                        "focus"
+                        "tab14"
                     ],
                     "document": {
                         "changed": false,
@@ -150,7 +129,7 @@
                         }
                     },
                     "editorType": "terminal",
-                    "active": true
+                    "active": false
                 },
                 {
                     "type": "tab",
@@ -160,23 +139,98 @@
                         "tab17"
                     ],
                     "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1449259704951
-                        },
                         "filter": true,
                         "title": "Immediate (Javascript (browser))",
                         "tooltip": "Immediate (Javascript (browser))",
                         "immediate": {
+                            "folds": [],
+                            "scrolltop": 0,
+                            "scrollleft": 0,
+                            "selection": {
+                                "start": {
+                                    "row": 2,
+                                    "column": 0
+                                },
+                                "end": {
+                                    "row": 2,
+                                    "column": 0
+                                },
+                                "isBackwards": false
+                            },
+                            "options": {
+                                "guessTabSize": true,
+                                "useWrapMode": false,
+                                "wrapToView": true
+                            },
+                            "firstLineState": 0,
                             "type": "jsbrowser",
                             "history": [
                                 "console.log(web3)",
                                 "console.log(\"hello\")"
                             ],
                             "pos": -1
-                        }
+                        },
+                        "hash": "bc37e9908b413249fe666f189265c03143e4d841",
+                        "meta": {
+                            "timestamp": 1449259704951
+                        },
+                        "changed": false
                     },
                     "editorType": "immediate",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab3",
+                    "path": "",
+                    "className": [
+                        "tab3",
+                        "focus"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1449275965331
+                        },
+                        "filter": true,
+                        "title": "Terminal",
+                        "terminal": {
+                            "id": "devel_934",
+                            "cwd": "",
+                            "width": 1001,
+                            "height": 132
+                        }
+                    },
+                    "editorType": "terminal",
+                    "active": true
+                },
+                {
+                    "type": "tab",
+                    "name": "tab4",
+                    "path": "",
+                    "className": [
+                        "tab4"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1449352764130
+                        },
+                        "filter": true,
+                        "title": "contracts/Organizations.sol - Stopped",
+                        "tooltip": "contracts/Organizations.sol - Stopped",
+                        "output": {
+                            "id": "output586890",
+                            "width": 0,
+                            "height": 0,
+                            "config": {
+                                "runner": "Shell command",
+                                "command": "contracts/Organizations.sol",
+                                "debug": true
+                            }
+                        }
+                    },
+                    "editorType": "output",
                     "active": false
                 }
             ],
@@ -195,19 +249,19 @@
         "counters": {
             "@ace": 2,
             "@acestatus": 1,
-            "@divider": 9,
-            "@document": 28,
+            "@divider": 4,
+            "@document": 14,
             "@ethereum-console": 1,
-            "@form": 6,
+            "@form": 5,
             "@immediate": 1,
-            "@menu": 12,
-            "@menuitem": 38,
+            "@menu": 5,
+            "@menuitem": 13,
             "@pane": 2,
             "@postmessage": 1,
             "@preview": 1,
-            "@session": 28,
-            "@tab": 20,
-            "@undoManager": 28,
+            "@session": 13,
+            "@tab": 5,
+            "@undoManager": 14,
             "@welcome": 1
         }
     },
@@ -228,8 +282,8 @@
     },
     "panecycle": {
         "json()": [
-            "tab14",
-            "tab15"
+            "tab3",
+            "tab0"
         ]
     },
     "panels": {
@@ -274,16 +328,15 @@
         "@showfs": true,
         "expanded": {
             "json()": [
-                "/test",
                 "/dapp/contracts",
-                "/app",
-                "/",
                 "/node_modules/web3",
                 "/node_modules/web3/lib",
-                "/app/app/javascripts",
                 "/dapp/_pre",
-                "/contracts",
-                "/config/test"
+                "/",
+                "/test",
+                "/config",
+                "/app",
+                "/contracts"
             ]
         }
     },
@@ -291,8 +344,18 @@
         "json()": []
     },
     "search-history": {
+        "replace": {
+            "json()": [
+                "name",
+                "string name"
+            ]
+        },
         "search": {
             "json()": [
+                "from",
+                "Now",
+                "base",
+                "o.new",
                 "address prop\\",
                 "proposals",
                 "toTime"
@@ -301,14 +364,16 @@
     },
     "tabs": {
         "json()": {
-            "focus": "/test/organization.js",
+            "focus": "tab3",
             "meta": {
                 "accessList": [
-                    "tab15",
+                    "tab0",
                     "tab23",
                     "tab16",
-                    "tab19",
-                    "tab24"
+                    "tab15",
+                    "preview-http://quadraticvoting.on.ether.camp:8485",
+                    "tab18",
+                    "tab19"
                 ]
             },
             "name": "pane0",
@@ -323,7 +388,7 @@
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1449254955524
+                            "timestamp": 1449352598839
                         },
                         "filter": true,
                         "title": "Organizations.sol",
@@ -335,24 +400,43 @@
                 },
                 {
                     "type": "tab",
-                    "name": "tab15",
-                    "path": "/test/organization.js",
+                    "name": "tab0",
+                    "path": "/contracts/Proposal.sol",
                     "className": [
-                        "tab15",
-                        "focus"
+                        "tab0"
                     ],
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1449264516271
+                            "timestamp": 1449351284524
                         },
                         "filter": true,
-                        "title": "organization.js",
-                        "tooltip": "/test/organization.js",
+                        "title": "Proposal.sol",
+                        "tooltip": "/contracts/Proposal.sol",
                         "ace": {}
                     },
                     "editorType": "ace",
                     "active": true
+                },
+                {
+                    "type": "tab",
+                    "name": "tab15",
+                    "path": "/test/organizations.js",
+                    "className": [
+                        "tab15"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1449281384227
+                        },
+                        "filter": true,
+                        "title": "organizations.js",
+                        "tooltip": "/test/organizations.js",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
                 },
                 {
                     "type": "tab",
@@ -364,12 +448,78 @@
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1449259002815
+                            "timestamp": 1449353168168
                         },
                         "filter": true,
                         "title": "index.html",
                         "tooltip": "/app/index.html",
                         "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "preview-http://quadraticvoting.on.ether.camp:8485",
+                    "path": "",
+                    "className": [
+                        "preview-http---quadraticvoting-on-ether-camp-8485"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {},
+                        "filter": true,
+                        "title": "[P] http://quadraticvoting.on.ether.camp:8485",
+                        "preview": {
+                            "path": "http://quadraticvoting.on.ether.camp:8080/index.html",
+                            "previewer": "preview.browser",
+                            "disableInjection": false
+                        }
+                    },
+                    "editorType": "preview",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab18",
+                    "path": "/config/development/config.json",
+                    "className": [
+                        "tab18"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "config.json",
+                        "tooltip": "/config/development/config.json",
+                        "ace": {
+                            "folds": [],
+                            "scrolltop": 0,
+                            "scrollleft": 0,
+                            "selection": {
+                                "start": {
+                                    "row": 0,
+                                    "column": 0
+                                },
+                                "end": {
+                                    "row": 0,
+                                    "column": 0
+                                },
+                                "isBackwards": false
+                            },
+                            "options": {
+                                "guessTabSize": true,
+                                "useWrapMode": false,
+                                "wrapToView": true
+                            },
+                            "firstLineState": {
+                                "row": 9,
+                                "mode": "ace/mode/json"
+                            }
+                        },
+                        "hash": "5f36b2ea290645ee34d943220a14b54ee5ea5be5",
+                        "meta": {
+                            "timestamp": 1449086194983
+                        },
+                        "changed": false
                     },
                     "editorType": "ace",
                     "active": false
@@ -382,14 +532,37 @@
                         "tab19"
                     ],
                     "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1449263896999
-                        },
                         "filter": true,
                         "title": "app.json",
                         "tooltip": "/config/app.json",
-                        "ace": {}
+                        "ace": {
+                            "folds": [],
+                            "scrolltop": 0,
+                            "scrollleft": 0,
+                            "selection": {
+                                "start": {
+                                    "row": 24,
+                                    "column": 13
+                                },
+                                "end": {
+                                    "row": 24,
+                                    "column": 42
+                                },
+                                "isBackwards": true
+                            },
+                            "options": {
+                                "guessTabSize": true,
+                                "useWrapMode": false,
+                                "wrapToView": true
+                            },
+                            "firstLineState": 0,
+                            "cleansed": true
+                        },
+                        "hash": "fcc5e5ea12f55ce1aea44b38aa5c56617fd0fef2",
+                        "meta": {
+                            "timestamp": 1449263897262
+                        },
+                        "changed": false
                     },
                     "editorType": "ace",
                     "active": false
@@ -402,7 +575,7 @@
     },
     "tree_selection": {
         "json()": [
-            "/test/organization.js"
+            "/contracts/Organizations.sol"
         ]
     },
     "watches": {

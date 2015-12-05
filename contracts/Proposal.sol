@@ -1,6 +1,6 @@
 contract Proposal {
-	uint organization;
-	address owner;
+	string public organization;
+	address public owner;
 	string public description;
 	string public name;
 	address[] public voted;
@@ -10,11 +10,11 @@ contract Proposal {
 	uint public startTime;
 	uint public endTime;
 	uint public nbVoters;
-	uint public Now;
+	uint Now = now;
 
 
-	function Proposal(uint orgNum, string newName, string newDescription, uint startime, uint endtime) {
-		organization = orgNum;
+	function Proposal(string orgName, string newName, string newDescription, uint startime, uint endtime) {
+		organization = orgName;
 		owner = msg.sender;
 		name = newName;
 		startTime = startime;
