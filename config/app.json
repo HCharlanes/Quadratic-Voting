@@ -2,6 +2,7 @@
   "build": {
     // Copy ./app/index.html (right hand side) to ./build/index.html.
     "index.html": "index.html",
+    "client/": "client/",
     "app.js": [
       // Paths relative to "app" directory that should be
       // concatenated and processed during build.
@@ -18,11 +19,11 @@
   },
   "deploy": [
     // Names of contracts that should be deployed to the network.
-    "OrganizationsFactory", "Organization", "Proposal"
+    "OrganizationsFactory", "Organization", "Proposal", "Election"
   ],
   "rpc": {
     // Default RPC configuration.
-    "host": "localhost",
+    "host": "quadraticvoting.on.ether.camp",
     "port": 8545
   }
 }

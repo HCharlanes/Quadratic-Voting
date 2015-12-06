@@ -14,11 +14,12 @@ contract Organization {  // can be killed, so the owner gets sent the money in t
 	mapping (address => bool) public members;
 	mapping (address => uint) public balances;
 	mapping (address => int) public propResults;
-	mapping (uint => address) public proposals;
-	mapping (address =>bool) public elections;
+	mapping (address => bool) public elections;
+	address[] public proposals;
+	mapping (address => uint) public proposalIDs;
 	
 	//Fake time, testing purpose.
-	//uint public Now;
+	uint public Now;
 
 	//Events
 	event NewMember(address _new); // so you can log the event
@@ -33,6 +34,7 @@ contract Organization {  // can be killed, so the owner gets sent the money in t
 		numMembers = 0;
 		numProposals = 0;
 		proposalID = 0;
+		proposals.push(0);
 	}
 
 	//Fake time management
@@ -69,10 +71,9 @@ contract Organization {  // can be killed, so the owner gets sent the money in t
 		if( startTime < Now + minNotice ) { return; }
 		proposalID++;
 		prop = new Proposal(name, description, startTime, endTime, msg.sender);
-		proposals[proposalID] = prop;		
+		proposals.push(prop);		
 		propResults[prop] = -1;
 		numProposals++;
-		proposalID++;
 	}
 	
 	//Create Election
@@ -83,9 +84,6 @@ contract Organization {  // can be killed, so the owner gets sent the money in t
 		return election;
 	}
 	
-	
-
-
 	function vote(bool vote, uint weight, address proposal) {
 
 		if( !members[msg.sender] ) { return; }
@@ -94,10 +92,10 @@ contract Organization {  // can be killed, so the owner gets sent the money in t
 		if( weight*weight > balances[msg.sender] ) { return; }
 		Proposal prop = Proposal(proposal);
 
-	//	if( Now >= prop.startTime() && Now < prop.endTime() ) {
+		//if( Now >= prop.startTime() && Now < prop.endTime() ) {
 			balances[msg.sender] -= weight*weight;
 			prop.vote(vote, weight, msg.sender);
-	//	}
+		//}
 	}
 function runForElection(address electAddr, bytes32 description){
         //Sanity Checks

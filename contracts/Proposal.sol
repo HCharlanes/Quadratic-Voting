@@ -32,17 +32,16 @@ contract Proposal {
 	}
 
 	function vote(bool vote, uint weight, address member) {
-		//if(msg.sender != organization) { return; }
-
+		if(msg.sender != organization) { return; }
 		voted.push(member);
 		bal += weight * weight;
 		nbVoters++;
 		if(vote) {
 			forVotes += weight;
-			return;
+			return;}
 		againstVotes += weight;
 		return;
-		}
+		
 	}
 	
 	//We should allow for a supermajority as well- return the ratio of forVotes to againstVotes and let the organization decides what that means
@@ -50,7 +49,6 @@ contract Proposal {
 		//if( Now < endTime ) { return; }
 		if(forVotes > againstVotes) {result = 1; return 1;}
 		if(forVotes <= againstVotes) {result = 0; return 0;}
-
 	}
 	
 	function totalResult() returns (uint result) {

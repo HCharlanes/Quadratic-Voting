@@ -5,7 +5,8 @@ contract OrganizationsFactory {  // can be killed, so the owner gets sent the mo
 address public factoryManager;
 uint public numOrganizations;
 uint public organizationID;
-mapping (uint => address) public organizations;
+address[] public organizations;
+mapping(address => uint) organizationIDs;
 
 
 event NewMember(address _new); // so you can log the event
@@ -16,13 +17,15 @@ event DeletedMember(address _old); // so you can log the event
         factoryManager = msg.sender;
         numOrganizations = 0;
         organizationID = 0;
+        organizations.push(0);
     }
 
 	function NewOrganization (bytes32 name, uint basetokens, uint minNotice) {
 		address org = new Organization(name, basetokens, minNotice , msg.sender);
-		organizations[organizationID] = org;		
+		organizations.push(org);
 		numOrganizations++;
 		organizationID++;
+		organizationIDs[org] = organizationID;
 	}
 	
 	function DeleteOrganization (address addrOrganization) {

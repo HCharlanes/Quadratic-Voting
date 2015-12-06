@@ -1,4 +1,4 @@
-contract('Election', function(accounts) {
+/*contract('Election', function(accounts) {
     console.log(accounts);
     var creator = accounts[0];
     var member1 = accounts[1];
@@ -16,4 +16,5 @@ contract('Election', function(accounts) {
           function (contract){})
     });
   */
-});
+//});
+//*/
