@@ -11,17 +11,7 @@
         }
     },
     "breakpoints": {
-        "json()": [
-            {
-                "path": "/contracts/Election.sol",
-                "line": 49,
-                "column": 8,
-                "text": "Election.sol",
-                "content": "        ",
-                "enabled": true,
-                "moved": 51
-            }
-        ]
+        "json()": []
     },
     "collab": {
         "panel": {
@@ -35,17 +25,16 @@
     },
     "console": {
         "@expanded": true,
-        "@height": 158,
+        "@height": 152,
         "@maximized": false,
         "json()": {
             "meta": {
                 "accessList": [
-                    "tab12",
-                    "tab14",
+                    "tab1",
                     "tab5",
-                    "tab17",
                     "tab2",
-                    "tab8"
+                    "tab14",
+                    "tab17"
                 ]
             },
             "name": "pane1",
@@ -58,18 +47,20 @@
                         "tab5"
                     ],
                     "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1449363241908
-                        },
                         "filter": true,
                         "title": "Terminal",
                         "terminal": {
                             "id": "devel_789",
                             "cwd": "",
-                            "width": 873,
-                            "height": 132
-                        }
+                            "width": 988,
+                            "height": 126,
+                            "scrollTop": 15255
+                        },
+                        "hash": "67452301efcdab8998badcfe10325476c3d2e1f0",
+                        "meta": {
+                            "timestamp": 1449363241908
+                        },
+                        "changed": false
                     },
                     "editorType": "terminal",
                     "active": false
@@ -82,40 +73,46 @@
                         "tab2"
                     ],
                     "document": {
-                        "changed": false,
-                        "meta": {},
                         "filter": true,
                         "title": "Immediate (Javascript (browser))",
                         "tooltip": "Immediate (Javascript (browser))",
                         "immediate": {
+                            "folds": [],
+                            "scrolltop": 0,
+                            "scrollleft": 0,
+                            "selection": {
+                                "start": {
+                                    "row": 10,
+                                    "column": 0
+                                },
+                                "end": {
+                                    "row": 10,
+                                    "column": 0
+                                },
+                                "isBackwards": false
+                            },
+                            "options": {
+                                "guessTabSize": true,
+                                "useWrapMode": false,
+                                "wrapToView": true
+                            },
+                            "firstLineState": 0,
                             "type": "jsbrowser",
                             "history": [
+                                "truffle",
+                                "web3",
                                 "ls",
                                 "web3",
                                 "console.log(web3)",
                                 "web3.eth"
                             ],
                             "pos": -1
-                        }
+                        },
+                        "hash": "464167ceb47792162af14187cc0fc8a43093b0cc",
+                        "meta": {},
+                        "changed": false
                     },
                     "editorType": "immediate",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab8",
-                    "path": "",
-                    "className": [],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1449098709562
-                        },
-                        "filter": true,
-                        "title": "Ethereum Console",
-                        "ethereum-console": {}
-                    },
-                    "editorType": "ethereum-console",
                     "active": false
                 },
                 {
@@ -126,19 +123,21 @@
                         "tab14"
                     ],
                     "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1449254256335
-                        },
                         "filter": true,
                         "title": "bash - \"c4301f299bab\"",
                         "tooltip": "bash - \"c4301f299bab\"",
                         "terminal": {
                             "id": "devel_669",
                             "cwd": "",
-                            "width": 873,
-                            "height": 132
-                        }
+                            "width": 1294,
+                            "height": 570,
+                            "scrollTop": 32969
+                        },
+                        "hash": "67452301efcdab8998badcfe10325476c3d2e1f0",
+                        "meta": {
+                            "timestamp": 1449254256335
+                        },
+                        "changed": false
                     },
                     "editorType": "terminal",
                     "active": false
@@ -151,45 +150,66 @@
                         "tab17"
                     ],
                     "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1449259704951
-                        },
                         "filter": true,
                         "title": "Immediate (Javascript (browser))",
                         "tooltip": "Immediate (Javascript (browser))",
                         "immediate": {
+                            "folds": [],
+                            "scrolltop": 0,
+                            "scrollleft": 0,
+                            "selection": {
+                                "start": {
+                                    "row": 2,
+                                    "column": 0
+                                },
+                                "end": {
+                                    "row": 2,
+                                    "column": 0
+                                },
+                                "isBackwards": false
+                            },
+                            "options": {
+                                "guessTabSize": true,
+                                "useWrapMode": false,
+                                "wrapToView": true
+                            },
+                            "firstLineState": 0,
                             "type": "jsbrowser",
                             "history": [
                                 "console.log(web3)",
                                 "console.log(\"hello\")"
                             ],
                             "pos": -1
-                        }
+                        },
+                        "hash": "bc37e9908b413249fe666f189265c03143e4d841",
+                        "meta": {
+                            "timestamp": 1449259704951
+                        },
+                        "changed": false
                     },
                     "editorType": "immediate",
                     "active": false
                 },
                 {
                     "type": "tab",
-                    "name": "tab12",
+                    "name": "tab1",
                     "path": "",
                     "className": [
-                        "tab12",
+                        "tab1",
                         "focus"
                     ],
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1449363846802
+                            "timestamp": 1449391427046
                         },
                         "filter": true,
                         "title": "Terminal",
                         "terminal": {
-                            "id": "devel_853",
+                            "id": "devel_94",
                             "cwd": "",
-                            "width": 873,
-                            "height": 132
+                            "width": 796,
+                            "height": 126
                         }
                     },
                     "editorType": "terminal",
@@ -209,22 +229,23 @@
     },
     "ext": {
         "counters": {
-            "@ace": 3,
+            "@ace": 2,
             "@acestatus": 2,
-            "@divider": 7,
-            "@document": 23,
+            "@divider": 5,
+            "@document": 12,
             "@ethereum-console": 1,
             "@form": 5,
             "@immediate": 1,
-            "@menu": 7,
-            "@menuitem": 27,
+            "@menu": 8,
+            "@menuitem": 20,
             "@pane": 3,
             "@postmessage": 1,
             "@preferences": 1,
             "@preview": 1,
-            "@session": 23,
-            "@tab": 22,
-            "@undoManager": 23,
+            "@session": 8,
+            "@tab": 4,
+            "@tree": 2,
+            "@undoManager": 12,
             "@welcome": 1
         }
     },
@@ -245,15 +266,15 @@
     },
     "panecycle": {
         "json()": [
-            "tab12",
-            "tab21",
+            "tab1",
+            "tab28",
             "tab4"
         ]
     },
     "panels": {
         "@active-left": "tree",
-        "@active-right": "ethergit.ethereum.sandbox.panel",
-        "@width-left": 421,
+        "@active-right": "collab",
+        "@width-left": 248,
         "collab": {
             "@enabled": "true",
             "@name": "collab"
@@ -288,7 +309,7 @@
         }
     },
     "projecttree": {
-        "@scrollpos": 188,
+        "@scrollpos": -5,
         "@showfs": true,
         "expanded": {
             "json()": [
@@ -297,13 +318,13 @@
                 "/",
                 "/test",
                 "/app",
-                "/contracts",
                 "/config",
                 "/dapp",
                 "/config/staging",
                 "/config/production",
                 "/config/development",
-                "/build"
+                "/build",
+                "/contracts"
             ]
         }
     },
@@ -313,12 +334,22 @@
     "search-history": {
         "replace": {
             "json()": [
+                "bytes32",
                 "name",
                 "string name"
             ]
         },
         "search": {
             "json()": [
+                "string",
+                "bytes",
+                "bytese",
+                "new Proposal(name",
+                "name = new",
+                "newName",
+                "address election",
+                "members(msg",
+                "make election",
                 "address prop =",
                 "from",
                 "Now",
@@ -340,51 +371,6 @@
                     "nodes": [
                         {
                             "type": "tab",
-                            "name": "tab18",
-                            "path": "/config/development/config.json",
-                            "className": [
-                                "tab18"
-                            ],
-                            "document": {
-                                "filter": true,
-                                "title": "config.json",
-                                "tooltip": "/config/development/config.json",
-                                "ace": {
-                                    "folds": [],
-                                    "scrolltop": 0,
-                                    "scrollleft": 0,
-                                    "selection": {
-                                        "start": {
-                                            "row": 0,
-                                            "column": 0
-                                        },
-                                        "end": {
-                                            "row": 0,
-                                            "column": 0
-                                        },
-                                        "isBackwards": false
-                                    },
-                                    "options": {
-                                        "guessTabSize": true,
-                                        "useWrapMode": false,
-                                        "wrapToView": true
-                                    },
-                                    "firstLineState": {
-                                        "row": 9,
-                                        "mode": "ace/mode/json"
-                                    }
-                                },
-                                "hash": "5f36b2ea290645ee34d943220a14b54ee5ea5be5",
-                                "meta": {
-                                    "timestamp": 1449086194983
-                                },
-                                "changed": false
-                            },
-                            "editorType": "ace",
-                            "active": false
-                        },
-                        {
-                            "type": "tab",
                             "name": "tab11",
                             "path": "/contracts/Proposal.sol",
                             "className": [
@@ -393,7 +379,7 @@
                             "document": {
                                 "changed": false,
                                 "meta": {
-                                    "timestamp": 1449375933252
+                                    "timestamp": 1449391677654
                                 },
                                 "filter": true,
                                 "title": "Proposal.sol",
@@ -408,13 +394,12 @@
                             "name": "tab19",
                             "path": "/contracts/Election.sol",
                             "className": [
-                                "tab19",
-                                "changed"
+                                "tab19"
                             ],
                             "document": {
-                                "changed": true,
+                                "changed": false,
                                 "meta": {
-                                    "timestamp": 1449379217454
+                                    "timestamp": 1449392214128
                                 },
                                 "filter": true,
                                 "title": "Election.sol",
@@ -426,16 +411,16 @@
                         },
                         {
                             "type": "tab",
-                            "name": "tab21",
+                            "name": "tab28",
                             "path": "/contracts/Organization.sol",
                             "className": [
-                                "tab21",
+                                "tab28",
                                 "focus"
                             ],
                             "document": {
                                 "changed": false,
                                 "meta": {
-                                    "timestamp": 1449377130746
+                                    "timestamp": 1449392005971
                                 },
                                 "filter": true,
                                 "title": "Organization.sol",
@@ -444,16 +429,36 @@
                             },
                             "editorType": "ace",
                             "active": true
+                        },
+                        {
+                            "type": "tab",
+                            "name": "tab3",
+                            "path": "/contracts/OrganizationsFactory.sol",
+                            "className": [
+                                "tab3"
+                            ],
+                            "document": {
+                                "changed": false,
+                                "meta": {
+                                    "timestamp": 1449391752060
+                                },
+                                "filter": true,
+                                "title": "OrganizationsFactory.sol",
+                                "tooltip": "/contracts/OrganizationsFactory.sol",
+                                "ace": {}
+                            },
+                            "editorType": "ace",
+                            "active": false
                         }
                     ],
                     "skin": "editor_tab",
                     "skinset": "default",
                     "meta": {
                         "accessList": [
-                            "tab21",
+                            "tab28",
                             "tab11",
                             "tab19",
-                            "tab18"
+                            "tab3"
                         ]
                     }
                 },
@@ -466,13 +471,12 @@
                             "name": "tab4",
                             "path": "/test/election.js",
                             "className": [
-                                "tab4",
-                                "changed"
+                                "tab4"
                             ],
                             "document": {
-                                "changed": true,
+                                "changed": false,
                                 "meta": {
-                                    "timestamp": 1449376898910
+                                    "timestamp": 1449382216986
                                 },
                                 "filter": true,
                                 "title": "election.js",
@@ -498,7 +502,7 @@
     },
     "tree_selection": {
         "json()": [
-            "/contracts/Organization.sol"
+            "/contracts/OrganizationsFactory.sol"
         ]
     },
     "watches": {

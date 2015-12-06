@@ -1,8 +1,9 @@
 contract Proposal {
 	// var that defines the proposal
+	address public organization;
 	address public creator;
-	string public description;
-	string public name;
+	bytes32 public description;
+	bytes32 public name;
 	uint public startTime;
 	uint public endTime;
 
@@ -15,8 +16,9 @@ contract Proposal {
 	uint Now = now;
 
 
-	function Proposal(string newName, string newDescription, uint startime, uint endtime) {
-		creator = msg.sender;
+	function Proposal(bytes32 newName, bytes32 newDescription, uint startime, uint endtime, address Creator) {
+		organization = msg.sender;
+		creator = Creator;
 		name = newName;
 		startTime = startime;
 		endTime = endtime;
@@ -29,7 +31,7 @@ contract Proposal {
 	}
 
 	function vote(bool vote, uint weight, address member) {
-		if(msg.sender != creator) { return; }
+		if(msg.sender != organization) { return; }
 
 		voted.push(member);
 		bal += weight * weight;
@@ -56,7 +58,7 @@ contract Proposal {
 	}
 
 	function destroy() {
-		if (msg.sender == creator) { // without this funds could be locked in the contract forever!
+		if (msg.sender == organization || msg.sender==creator) { // without this funds could be locked in the contract forever!
 			suicide(creator);
 		}
 	}

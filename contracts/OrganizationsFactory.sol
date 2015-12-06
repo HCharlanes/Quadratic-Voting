@@ -1,6 +1,5 @@
-import "Proposal";
 import "Organization";
-contract OrganizationsFactory {/*  // can be killed, so the owner gets sent the money in the end
+contract OrganizationsFactory {  // can be killed, so the owner gets sent the money in the end
 
 //states of the Organization Factory
 address public factoryManager;
@@ -19,9 +18,8 @@ event DeletedMember(address _old); // so you can log the event
         organizationID = 0;
     }
 
-	function NewOrganization (string name, uint basetokens, uint minNotice) {
-		if( msg.sender != factoryManager ) { return; }
-		address org = new Organization(name, basetokens, minNotice);
+	function NewOrganization (bytes32 name, uint basetokens, uint minNotice) {
+		address org = new Organization(name, basetokens, minNotice , msg.sender);
 		organizations[organizationID] = org;		
 		numOrganizations++;
 		organizationID++;
@@ -39,4 +37,4 @@ event DeletedMember(address _old); // so you can log the event
 			suicide(factoryManager);
 		}
 	}
-*/}
+}

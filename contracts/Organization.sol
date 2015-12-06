@@ -1,5 +1,5 @@
 import "Proposal";
-
+import "Election";
 contract Organization {  // can be killed, so the owner gets sent the money in the end
 	// Variables that define the organization
 	address public organizationOwner;
@@ -15,6 +15,7 @@ contract Organization {  // can be killed, so the owner gets sent the money in t
 	mapping (address => uint) public balances;
 	mapping (address => int) public propResults;
 	mapping (uint => address) public proposals;
+	mapping (address =>bool) public elections;
 	
 	//Fake time, testing purpose.
 	uint public Now;
@@ -25,7 +26,7 @@ contract Organization {  // can be killed, so the owner gets sent the money in t
 	event Dispatch(uint amount);
 
 	//Constructor
-	function Organization(string name, uint basetokens, uint minNotice, address owner) {
+	function Organization(bytes32 name, uint basetokens, uint minNotice, address owner) {
 		organizationOwner = owner;
 		base_tokens = basetokens;
 		token_count = 0;
@@ -63,16 +64,25 @@ contract Organization {  // can be killed, so the owner gets sent the money in t
 	}
 
 	//Create Proposal
-	function makeProposal returns (uint ID) (string name, string description, uint startTime, uint endTime) {
+	function makeProposal(bytes32 name, bytes32 description, uint startTime, uint endTime)   returns(address prop)  {
 		if( msg.sender != organizationOwner ) { return; }
 		if( startTime < Now + minNotice ) { return; }
-		address prop = new Proposal(name, description, startTime, endTime, msg.sender);
+		prop = new Proposal(name, description, startTime, endTime, msg.sender);
 		proposals[proposalID] = prop;		
 		propResults[prop] = -1;
 		numProposals++;
-		return proposalID;
 		proposalID++;
 	}
+	
+	//Create Election
+	function makeElection(bytes32 pos, bytes32 desc, uint start, uint end)   returns(address elect)  {
+		if( msg.sender != organizationOwner || start < Now + minNotice || start > end) { throw; }
+		address election  = new Election(pos, desc, start, end);
+		elections[election] = true;
+		return election;
+	}
+	
+	
 
 
 	function vote(bool vote, uint weight, address proposal) {
@@ -88,7 +98,14 @@ contract Organization {  // can be killed, so the owner gets sent the money in t
 			prop.vote(vote, weight, msg.sender);
 		}
 	}
-
+function runForElection(address electAddr, bytes32 description){
+        //Sanity Checks
+        if (!members[msg.sender] || !elections[electAddr]) {throw;}
+        bytes32 proposalName = Election(electAddr).positionName();
+        bytes32 proposalDescription = description;
+        address newProp = makeProposal(proposalName,proposalDescription, Election(electAddr).startDate(), Election(electAddr).endDate());
+        Election(electAddr).addCandidate(msg.sender, newProp);
+    }
 	function dispatchBalance(address proposal) {
 		Proposal p = Proposal(proposal);
 		for(var i=0; i < p.nbVoters(); i++) {
