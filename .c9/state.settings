@@ -232,7 +232,7 @@
             "@ace": 2,
             "@acestatus": 2,
             "@divider": 5,
-            "@document": 12,
+            "@document": 18,
             "@ethereum-console": 1,
             "@form": 5,
             "@immediate": 1,
@@ -242,10 +242,10 @@
             "@postmessage": 1,
             "@preferences": 1,
             "@preview": 1,
-            "@session": 8,
-            "@tab": 4,
+            "@session": 14,
+            "@tab": 13,
             "@tree": 2,
-            "@undoManager": 12,
+            "@undoManager": 18,
             "@welcome": 1
         }
     },
@@ -267,8 +267,8 @@
     "panecycle": {
         "json()": [
             "tab1",
-            "tab28",
-            "tab4"
+            "tab12",
+            "tab6"
         ]
     },
     "panels": {
@@ -309,7 +309,7 @@
         }
     },
     "projecttree": {
-        "@scrollpos": -5,
+        "@scrollpos": -10,
         "@showfs": true,
         "expanded": {
             "json()": [
@@ -317,14 +317,15 @@
                 "/dapp/_pre",
                 "/",
                 "/test",
-                "/app",
                 "/config",
                 "/dapp",
                 "/config/staging",
                 "/config/production",
                 "/config/development",
-                "/build",
-                "/contracts"
+                "/contracts",
+                "/client/contracts",
+                "/client/components",
+                "/app"
             ]
         }
     },
@@ -363,7 +364,7 @@
     },
     "tabs": {
         "json()": {
-            "focus": "/contracts/Organization.sol",
+            "focus": "tab1",
             "nodes": [
                 {
                     "type": "pane",
@@ -414,13 +415,12 @@
                             "name": "tab28",
                             "path": "/contracts/Organization.sol",
                             "className": [
-                                "tab28",
-                                "focus"
+                                "tab28"
                             ],
                             "document": {
                                 "changed": false,
                                 "meta": {
-                                    "timestamp": 1449392005971
+                                    "timestamp": 1449392557116
                                 },
                                 "filter": true,
                                 "title": "Organization.sol",
@@ -428,7 +428,7 @@
                                 "ace": {}
                             },
                             "editorType": "ace",
-                            "active": true
+                            "active": false
                         },
                         {
                             "type": "tab",
@@ -449,12 +449,96 @@
                             },
                             "editorType": "ace",
                             "active": false
+                        },
+                        {
+                            "type": "tab",
+                            "name": "tab6",
+                            "path": "/app/client/head.html",
+                            "className": [
+                                "tab6"
+                            ],
+                            "document": {
+                                "changed": false,
+                                "meta": {
+                                    "timestamp": 1449393325964
+                                },
+                                "filter": true,
+                                "title": "head.html",
+                                "tooltip": "/app/client/head.html",
+                                "ace": {}
+                            },
+                            "editorType": "ace",
+                            "active": true
+                        },
+                        {
+                            "type": "tab",
+                            "name": "tab8",
+                            "path": "/app/client/contracts/SimpleStorage.sol",
+                            "className": [
+                                "tab8"
+                            ],
+                            "document": {
+                                "changed": false,
+                                "meta": {
+                                    "timestamp": 1449393362338
+                                },
+                                "filter": true,
+                                "title": "SimpleStorage.sol",
+                                "tooltip": "/app/client/contracts/SimpleStorage.sol",
+                                "ace": {}
+                            },
+                            "editorType": "ace",
+                            "active": false
+                        },
+                        {
+                            "type": "tab",
+                            "name": "tab9",
+                            "path": "/app/client/components/VotingApp.jsx",
+                            "className": [
+                                "tab9"
+                            ],
+                            "document": {
+                                "changed": false,
+                                "meta": {
+                                    "timestamp": 1449393371968
+                                },
+                                "filter": true,
+                                "title": "VotingApp.jsx",
+                                "tooltip": "/app/client/components/VotingApp.jsx",
+                                "ace": {}
+                            },
+                            "editorType": "ace",
+                            "active": false
+                        },
+                        {
+                            "type": "tab",
+                            "name": "tab10",
+                            "path": "/app/client/components/ProposalList.jsx",
+                            "className": [
+                                "tab10"
+                            ],
+                            "document": {
+                                "changed": false,
+                                "meta": {
+                                    "timestamp": 1449393381221
+                                },
+                                "filter": true,
+                                "title": "ProposalList.jsx",
+                                "tooltip": "/app/client/components/ProposalList.jsx",
+                                "ace": {}
+                            },
+                            "editorType": "ace",
+                            "active": false
                         }
                     ],
                     "skin": "editor_tab",
                     "skinset": "default",
                     "meta": {
                         "accessList": [
+                            "tab6",
+                            "tab10",
+                            "tab9",
+                            "tab8",
                             "tab28",
                             "tab11",
                             "tab19",
@@ -484,6 +568,26 @@
                                 "ace": {}
                             },
                             "editorType": "ace",
+                            "active": false
+                        },
+                        {
+                            "type": "tab",
+                            "name": "tab12",
+                            "path": "/config/app.json",
+                            "className": [
+                                "tab12"
+                            ],
+                            "document": {
+                                "changed": false,
+                                "meta": {
+                                    "timestamp": 1449386964467
+                                },
+                                "filter": true,
+                                "title": "app.json",
+                                "tooltip": "/config/app.json",
+                                "ace": {}
+                            },
+                            "editorType": "ace",
                             "active": true
                         }
                     ],
@@ -492,6 +596,7 @@
                     "skinset": "default",
                     "meta": {
                         "accessList": [
+                            "tab12",
                             "tab4"
                         ]
                     }
@@ -502,7 +607,7 @@
     },
     "tree_selection": {
         "json()": [
-            "/contracts/OrganizationsFactory.sol"
+            "/app/client"
         ]
     },
     "watches": {

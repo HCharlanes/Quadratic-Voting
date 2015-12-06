@@ -18,7 +18,7 @@ contract Organization {  // can be killed, so the owner gets sent the money in t
 	mapping (address =>bool) public elections;
 	
 	//Fake time, testing purpose.
-	uint public Now;
+	//uint public Now;
 
 	//Events
 	event NewMember(address _new); // so you can log the event
@@ -67,6 +67,7 @@ contract Organization {  // can be killed, so the owner gets sent the money in t
 	function makeProposal(bytes32 name, bytes32 description, uint startTime, uint endTime)   returns(address prop)  {
 		if( msg.sender != organizationOwner ) { return; }
 		if( startTime < Now + minNotice ) { return; }
+		proposalID++;
 		prop = new Proposal(name, description, startTime, endTime, msg.sender);
 		proposals[proposalID] = prop;		
 		propResults[prop] = -1;
@@ -93,10 +94,10 @@ contract Organization {  // can be killed, so the owner gets sent the money in t
 		if( weight*weight > balances[msg.sender] ) { return; }
 		Proposal prop = Proposal(proposal);
 
-		if( Now >= prop.startTime() && Now < prop.endTime() ) {
+	//	if( Now >= prop.startTime() && Now < prop.endTime() ) {
 			balances[msg.sender] -= weight*weight;
 			prop.vote(vote, weight, msg.sender);
-		}
+	//	}
 	}
 function runForElection(address electAddr, bytes32 description){
         //Sanity Checks
@@ -116,12 +117,12 @@ function runForElection(address electAddr, bytes32 description){
 	function getResult (address proposalAddress) {
 		if (propResults[proposalAddress] != -1) { return; }
 		Proposal p = Proposal(proposalAddress);
-		if(now >= p.endTime() ){
+		//if(now >= p.endTime() ){
 			propResults[proposalAddress] = p.Results();
 			dispatchBalance(proposalAddress);
 			numProposals--;
-			p.destroy();
-		}
+		//	p.destroy();
+	//	}
 	}
 
 	function destroy() {
