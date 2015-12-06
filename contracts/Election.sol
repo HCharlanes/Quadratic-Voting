@@ -7,33 +7,44 @@ contract Election{
     string public description;
     uint public startDate;
     uint public endDate;
-    address[] public candidates;
+    mapping (address => bool) public candidate;
     address[] public candidateProposals;
 
 
     function Election(address org, string pos, string desc, uint start, uint end){
         //Sanity Checks
-        if (msg.sender != Organization(org).organizer() || start > end || or start > now) {throw;}
+        if (msg.sender != Organization(org).organizer() || start > end || start > now) {throw;}
         organization = org;
         positionName = pos;
         description = desc;
-        startDate = startDate;
+        startDate = start;
         endDate = end;
     }
     
     function runForElection(){
         
         //Sanity Checks
-        if (!Organization(organization).members(msg.sender) || candidates[msg.sender]) {throw;}
-        candidates[] += msg.sender;
-        string proposalName = positionName + "-" + string(msg.sender);
-        newProp = Organization(organization).makeProposal(proposalName, startDate, endDate);
-        candidateProposals[] = newProp;
+        if (!Organization(organization).members(msg.sender) || candidate[msg.sender]) {throw;}
+        candidate[msg.sender] = true;
+        string proposalName = positionName;
+        string proposalDescription = positionName;
+        address newProp = Organization(organization).makeProposal(proposalName,proposalDescription, startDate, endDate);
+        candidateProposals.push(newProp);
     }
     
-    function checkWinner(){
+    function checkWinner() returns (address winProp){
         
-        //
+        uint totalResult =  0;
+        
+        //iterate over all candidate proposals and see which one has the highest total.
+        for (var i = 0; i < candidateProposals.length; i++){
+            uint currentResult = Proposal(candidateProposals[i]).totalResult();
+            if (currentResult > totalResult){
+                totalResult = currentResult;
+                address winningProp = candidateProposals[i];
+            }
+            return winningProp;
+        }
     }
     
 }

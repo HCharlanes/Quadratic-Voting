@@ -11,35 +11,35 @@ var factory = function factory(Pudding) {
   // the easiest way to extend a Babel-based class. Note that the
   // resulting .js file does not have a dependency on Babel.
 
-  var Example = (function (_Pudding) {
-    _inherits(Example, _Pudding);
+  var OrganizationsFactory = (function (_Pudding) {
+    _inherits(OrganizationsFactory, _Pudding);
 
-    function Example() {
-      _classCallCheck(this, Example);
+    function OrganizationsFactory() {
+      _classCallCheck(this, OrganizationsFactory);
 
-      _get(Object.getPrototypeOf(Example.prototype), "constructor", this).apply(this, arguments);
+      _get(Object.getPrototypeOf(OrganizationsFactory.prototype), "constructor", this).apply(this, arguments);
     }
 
-    return Example;
+    return OrganizationsFactory;
   })(Pudding);
 
   ;
 
   // Set up specific data for this class.
-  Example.abi = [{ "inputs": [], "type": "constructor" }];
-  Example.binary = "606060405260068060106000396000f3606060405200";
+  OrganizationsFactory.abi = [];
+  OrganizationsFactory.binary = "606060405260068060106000396000f3606060405200";
 
   if ("" != "") {
-    Example.address = "";
+    OrganizationsFactory.address = "";
 
     // Backward compatibility; Deprecated.
-    Example.deployed_address = "";
+    OrganizationsFactory.deployed_address = "";
   }
 
-  Example.generated_with = "1.0.2";
-  Example.contract_name = "Example";
+  OrganizationsFactory.generated_with = "1.0.2";
+  OrganizationsFactory.contract_name = "OrganizationsFactory";
 
-  return Example;
+  return OrganizationsFactory;
 };
 
 // Nicety for Node.
@@ -50,5 +50,5 @@ if (typeof module != "undefined") {
 } else {
   // There will only be one version of Pudding in the browser,
   // and we can use that.
-  window.Example = factory;
+  window.OrganizationsFactory = factory;
 }

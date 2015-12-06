@@ -18,11 +18,11 @@
   },
   "deploy": [
     // Names of contracts that should be deployed to the network.
-    "Organization", "Proposal"
+    "Organizations", "Proposal", "Election"
   ],
   "rpc": {
     // Default RPC configuration.
     "host": "localhost",
-    "port": 8545
+    "port": 8081
   }
 }

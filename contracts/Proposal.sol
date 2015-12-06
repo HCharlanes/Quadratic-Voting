@@ -1,21 +1,22 @@
 contract Proposal {
-	string public organization;
-	address public owner;
+	// var that defines the proposal
+	address public creator;
 	string public description;
 	string public name;
+	uint public startTime;
+	uint public endTime;
+
+	// states of the proposal
 	address[] public voted;
 	uint public forVotes;
 	uint public againstVotes;
 	uint public bal;
-	uint public startTime;
-	uint public endTime;
 	uint public nbVoters;
 	uint Now = now;
 
 
-	function Proposal(string orgName, string newName, string newDescription, uint startime, uint endtime) {
-		organization = orgName;
-		owner = msg.sender;
+	function Proposal(string newName, string newDescription, uint startime, uint endtime) {
+		creator = msg.sender;
 		name = newName;
 		startTime = startime;
 		endTime = endtime;
@@ -28,7 +29,7 @@ contract Proposal {
 	}
 
 	function vote(bool vote, uint weight, address member) {
-		if(msg.sender != owner) { return; }
+		if(msg.sender != creator) { return; }
 
 		voted.push(member);
 		bal += weight * weight;
@@ -42,15 +43,21 @@ contract Proposal {
 	}
 	
 	//We should allow for a supermajority as well- return the ratio of forVotes to againstVotes and let the organization decides what that means
-	function Results() returns (uint result) {
+	function Results() returns (int result) {
 		if( Now < endTime ) { return; }
-		if(forVotes > againstVotes)
-		return forVotes/againstVotes;
+		if(forVotes > againstVotes) {return 1;}
+		if(forVotes <= againstVotes) {return 0;}
+
 	}
 	
+	function totalResult() returns (uint result) {
+		if( Now < endTime ) { return; }
+		return forVotes - againstVotes;
+	}
+
 	function destroy() {
-		if (msg.sender == owner) { // without this funds could be locked in the contract forever!
-			suicide(owner);
+		if (msg.sender == creator) { // without this funds could be locked in the contract forever!
+			suicide(creator);
 		}
 	}
 }
