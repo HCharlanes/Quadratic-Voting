@@ -28,13 +28,14 @@ contract Organization {  // can be killed, so the owner gets sent the money in t
 		Now = fakeTime;
 	}
 
-	function makeProposal(string name, uint startTime, uint endTime) {
+	function makeProposal(string name, uint startTime, uint endTime) returns (address propAddr){
 		if( msg.sender != organizer ) { return; }
 		if( startTime < Now + minNotice ) { return; }
 		address prop = new Proposal(name, startTime, endTime);
 		proposals.push(prop);		
 		propResults[prop] = -1;
 		numProposals++;
+		return prop;
 	}
 
 	function addMember(address newMember) {
@@ -78,7 +79,7 @@ contract Organization {  // can be killed, so the owner gets sent the money in t
 			balances[p.voted(i)] += (p.bal() / p.nbVoters());	
 		}
 	}
-	
+	/*
 	function getResult (address proposalAddress) {
 		if (propResults[proposalAddress] != -1) { return; }
 		Proposal p = Proposal(proposalAddress);
@@ -88,6 +89,7 @@ contract Organization {  // can be killed, so the owner gets sent the money in t
 			p.destroy();
 		}
 	}
+	*/
 
 	function destroy() {
 		if (msg.sender == organizer) { // without this funds could be locked in the contract forever!

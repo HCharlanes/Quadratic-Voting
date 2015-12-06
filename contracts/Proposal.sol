@@ -1,6 +1,6 @@
-import "Organization";
 contract Proposal {
-	address owner;
+	string public organization;
+	address public owner;
 	string public description;
 	string public name;
 	address[] public voted;
@@ -10,10 +10,11 @@ contract Proposal {
 	uint public startTime;
 	uint public endTime;
 	uint public nbVoters;
-	uint public Now;
+	uint Now = now;
 
 
-	function Proposal(string newName, string newDescription, uint startime, uint endtime) {
+	function Proposal(string orgName, string newName, string newDescription, uint startime, uint endtime) {
+		organization = orgName;
 		owner = msg.sender;
 		name = newName;
 		startTime = startime;
@@ -51,14 +52,5 @@ contract Proposal {
 		if (msg.sender == owner) { // without this funds could be locked in the contract forever!
 			suicide(owner);
 		}
-	}
-	function endVote() {
-	    if (Now >= endTime){
-	        uint averagePayment = funds/voters;
-	        for (uint i = 0; i < nbVoters; i++){
-	            Organization(/*address here*/).giveTokens(voted[i], averagePayment);
-	            }
-	        }
-	    }
 	}
 }
